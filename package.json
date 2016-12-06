@@ -1,0 +1,45 @@
+{
+  "name": "pouchdb-upsert-bulk",
+  "version": "0.0.0",
+  "description": "Upsert bulk plugin for PouchDB",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "standard",
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlvince/pouchdb-upsert-bulk.git"
+  },
+  "keywords": [
+    "pouchdb",
+    "upsert",
+    "bulk"
+  ],
+  "author": "Tom Vincent <git@tlvince.com> (https://tlvince.com)",
+  "engines": {
+    "node": ">=6"
+  },
+  "bugs": {
+    "url": "https://github.com/tlvince/pouchdb-upsert-bulk/issues"
+  },
+  "homepage": "https://github.com/tlvince/pouchdb-upsert-bulk#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "ghooks": "1.3.2",
+    "pouchdb-http": "6.0.2",
+    "standard": "8.5.0",
+    "validate-commit-msg": "2.8.2"
+  },
+  "files": [
+    "index.js"
+  ],
+  "config": {
+    "ghooks": {
+      "commit-msg": "validate-commit-msg",
+      "pre-push": "npm test"
+    }
+  },
+  "license": "MIT"
+}
