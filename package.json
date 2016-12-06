@@ -7,9 +7,10 @@
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",
     "build": "rollup --config && rollup --config rollup.config.es6.js",
+    "prepublish": "npm run build",
     "pretest": "standard",
     "test": "ava",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm run build && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
