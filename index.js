@@ -1,4 +1,4 @@
-exports.upsertBulk = function (docs, opts = {}) {
+export function upsertBulk (docs, opts = {}) {
   const allDocsOpts = {
     keys: docs.map(doc => doc._id)
   }

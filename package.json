@@ -4,9 +4,10 @@
   "description": "Upsert bulk plugin for PouchDB",
   "main": "dist/pouchdb-upsert-build.cjs.js",
   "module": "dist/pouchdb-upsert-build.es6.js",
+  "esnext": "dist/pouchdb-upsert-build.esnext.js",
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",
-    "build": "rollup --config && rollup --config rollup.config.es6.js",
+    "build": "rollup --config && rollup --config rollup.config.es6.js && rollup --config rollup.config.esnext.js",
     "prepublish": "npm run build",
     "pretest": "standard",
     "test": "ava",

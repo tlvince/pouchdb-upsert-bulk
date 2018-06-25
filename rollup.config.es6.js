@@ -1,11 +1,8 @@
-import external from 'builtin-modules'
+import config from './rollup.config.js'
 
 const pkg = require('./package.json')
 
-export default {
-  entry: 'index.js',
+export default Object.assign({}, config, {
   dest: pkg.module,
-  format: 'es',
-  external,
-  plugins: []
-}
+  format: 'es'
+})
